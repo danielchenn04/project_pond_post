@@ -1,9 +1,0 @@
-{
-  "/api/users/me/route": "app/api/users/me/route.js",
-  "/api/messages/inbox/route": "app/api/messages/inbox/route.js",
-  "/nest/page": "app/nest/page.js",
-  "/mud-clearer/page": "app/mud-clearer/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/settings/page": "app/settings/page.js",
-  "/page": "app/page.js"
-}
