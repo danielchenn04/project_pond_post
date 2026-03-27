@@ -23,8 +23,12 @@ export default function PinModal({ open, onUnlocked, onCancel }: PinModalProps) 
       await loadPrivateKey(pin);
       setPin('');
       onUnlocked();
-    } catch {
-      setError('Incorrect PIN. Please try again.');
+    } catch (err) {
+      if (err instanceof Error && err.message === 'No private key found in localStorage') {
+        setError('No encryption key found on this device. Try logging in again or re-sync your keys in Settings.');
+      } else {
+        setError('Incorrect PIN. Please try again.');
+      }
     } finally {
       setLoading(false);
     }
